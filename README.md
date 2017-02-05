@@ -16,6 +16,13 @@ Se debe descargar la última versión del SDK desde el botón Download ZIP del b
 
 Una vez descargado y descomprimido el SDK JAVA actualizado, tenés que realizar el import a tu proyecto:
 ```xml
+File > New > Import Module.
+
+Ingresa la ubicación del directorio del módulo de biblioteca y luego haz clic en Finish.
+
+```
+Incorporar dependencias
+```xml
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
@@ -23,7 +30,7 @@ dependencies {
 }
 ```
 
-Una vez descargado se deben hacer los siguiente import.
+Agregar el import:
 ```java
 import com.tesis.autentic.ui.M1CardActivity;
 ```
