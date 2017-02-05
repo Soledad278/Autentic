@@ -2,8 +2,8 @@
 SDK Java - Framework para la explotación de aplicaciones que requieren autenticación de tarjetas
 
  + [Instalación](#instalacion)
- 	+ [Versiones de Java soportadas](#Versionesdejavasoportadas)
- 	+ [Generalidades](#general)
+	+ [Versiones de Java soportadas](#Versionesdejavasoportadas)
+	+ [Versiones de Android soportadas](#Versionesdeandroidsoportadas)
   + [Uso](#uso)		
     + [Inicializar la clase correspondiente al conector (Autentic\Sdk)](#initconector)
  
@@ -29,11 +29,27 @@ import com.tesis.autentic.ui.M1CardActivity;
 ```
 <a name="Versionesdejavasoportadas"></a>   
 ####1. Versiones de Java soportadas
-La versi&oacute;n implementada de la SDK, esta testeada para versiones desde Java 6 en adelante con JAX-WS.
+La versi&oacute;n implementada de la SDK, esta testeada para versiones desde Java 7 en adelante con JAX-WS.
 
+<a name="Versionesdeandroidsoportadas"></a>   
+####2. Versiones de Android soportadas
+     Android 2.0 o superior
+ 
+Todos los buil.gradle deben tener el mismo targetSdk. Versiones utilizadas:
+
+     targetSdk = API 23: Android 6.0 (Marshmallow)
+  
+     minSdkVersion = 19 Android 4.4 (KitKat).
+
+<a name="uso"></a>		
+## Uso	
 <a name="initconector"></a>
 ####Inicializar la clase correspondiente al conector (Autentic\Sdk).
 
-Intent intent = new Intent(Activity_Origen.this, Activity_Destino.class);
-intent.putExtra("usuario", usr);
-startActivity(intent);
+     Intent intent = new Intent(Activity_Origen.this, M1CardActivity.class);
+
+     intent.putExtra("usuario", usr);
+
+     startActivity(intent);
+
+Como parámetro se debe pasar el usuario registrado en autentic.
